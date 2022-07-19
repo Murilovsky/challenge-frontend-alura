@@ -8,12 +8,15 @@
   import Contato from './pages/Contato.svelte';
   import Pets from './pages/Pets.svelte';
   import Perfil from './pages/Perfil.svelte';
+  import {setContext} from 'svelte'
+
   let user = {
     username:'',
     password:''
   }
+  
   let userLogged = (user.password && user.username)!= ''
-  const routes = {'/':Home,'/login':Login,'/cadastro':Cadastro,'/contato':Contato,'/pets':Pets,'/perfil':Perfil}
+  const routes = {'/':Home,'/login/':Login,'/login':Cadastro,'/contato':Contato,'/pets':Pets,'/perfil':Perfil}
 </script>
 
 <main>

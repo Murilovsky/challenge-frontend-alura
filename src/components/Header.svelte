@@ -1,5 +1,6 @@
 <script>
     export let userLogged
+
 </script>
 <header>
     <img id='forma1' src="Forma_1.svg" alt="Forma1">
@@ -13,13 +14,15 @@
                 <img class='imagem' src="Casa.svg" alt="Home">                
             </a>
 
-            <a href="#/contato">
+            <a href={userLogged?'#/contato':'#/login'}>
                 <img class='imagem' src="Mensagens.svg" alt="Mail">
             </a>
         </div>
         {#if userLogged}
         <div class="perfil">
-            <img src="Usuario.png" alt="User">
+            <a href="#/perfil">
+                <img src="Usuario.png" alt="User">
+            </a>
         </div>   
         {/if} 
     </section>

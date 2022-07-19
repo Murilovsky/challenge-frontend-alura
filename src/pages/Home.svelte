@@ -4,7 +4,7 @@
         <h3>Boas Vindas!</h3>
         <p>Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
         <a href="#/login"><button>Já tenho uma conta</button></a>
-        <a href="#/cadastro"><button>Quero me Cadastrar</button></a>
+        <a href="#/login"><button>Quero me Cadastrar</button></a>
     </section>
     <img id="bichos" src="Ilustracao.png" alt="Um gato e um cachorro em flat design">
     <img id="forma2" src="Forma_2.svg" alt="Blob verde">
@@ -13,7 +13,7 @@
 <style>
 div{
     padding: 150px 14% 0 14%;
-    min-height: calc(820px - 180px);
+    min-height:calc(100vh - 230px);;
     background-color: #3772FF;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@ section{
     align-self: center;
 }
 #forma2{
-    width: 80px;
+    width: 70px;
     right: 0;
     position: absolute;
 }
@@ -57,6 +57,11 @@ section{
     }
     #bichos{
         width: 360px;
+    }
+}
+@media screen and (min-width:1440px){
+    div{
+        padding: 50px 20% 0 20%;
     }
 }
 
