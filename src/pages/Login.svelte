@@ -10,7 +10,7 @@
 <div>
     <img in:fly="{{y:-100,x:100,duration:500}}" id='patas' src="Patas.png" alt="Patas">
     <img src="Logo-azul.svg" alt="Logo do adopet">
-    <img  id='forma2' src="Forma_2.svg" alt="">
+    <img id="forma2" src="Forma_2.svg" alt="Blob verde">
     <p>Já tem conta? Faça seu login</p>
     <section>
 
@@ -53,9 +53,10 @@
     #forma2{
         position: absolute;
         transform: scaleX(-1);
+        height: 600px;
         left: 0;
-        top: 50
-        ;
+        top: 30%;
+        z-index: -1;
     }
     #patas{
         margin: 0;
@@ -74,8 +75,7 @@
     }
     div{
         padding: 150px 6% 0 6%;
-        min-height: 700px;
-        height: calc(100vh - 80px);
+        min-height: calc(100vh - 80px);
         text-align: center;
     }
     form{
@@ -110,6 +110,13 @@
         button{
             width: 30%;
         }
+        #forma2{
+            transform: scaleX(1);
+            top: 20%;
+            right: 0;
+            left: auto;
+            height: 620px;
+        }
     }
     @media screen and (min-width:1280px){
         div{
@@ -120,6 +127,9 @@
         }
         p{
             margin-bottom: 2%;
+        }
+        #forma2{
+            top: 10%;
         }
        
     }

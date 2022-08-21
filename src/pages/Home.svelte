@@ -39,10 +39,10 @@ section{
 
 }
 #forma2{
-    width: 70px;
+    height: 300px;
     position: absolute;
     right: 0;
-    top: 30%;
+    top: 40%;
 }
 .logo{
     max-height: 150px;
@@ -63,11 +63,16 @@ section{
     #bichos{
         max-width: 200px;
     }
+    #forma2{
+        top: 20%;
+        height: 670px;
+    }
 }
 @media screen and (min-width:1280px){
     #bichos{
         max-width: 250px;
     }
+  
 }
 
 </style>

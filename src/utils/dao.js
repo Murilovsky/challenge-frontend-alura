@@ -1,5 +1,6 @@
 async function ListaPets(){
-    return await fetch("http://localhost:3000")
+    const res = await fetch("http://localhost:3000/pets")
+    return res.json()
 }
 
 export{ListaPets}

@@ -67,7 +67,7 @@
             margin: 0 2rem;
         }
         #forma1{
-            width: 540px;
+            width: 500px;
         }
     }
     @media screen and (min-width:1280px){
