@@ -1,0 +1,76 @@
+{
+    "pets": [
+        {
+            "nome": "Dunga",
+            "idade": 2,
+            "tempo":"anos",
+            "porte":"pequeno",
+            "temperamento": "Calmo e educado",
+            "local": "Rio de Janeiro (RJ)"
+        },
+        {
+            "nome": "Felícia",
+            "idade": 3,
+            "tempo":"meses",
+            "porte":"pequeno",
+            "temperamento": "Ativa e carinhosa",
+            "local": "Nova Iguaçu (RJ)"
+        },
+        {
+            "nome": "Sirius",
+            "idade": 6,
+            "tempo":"meses",
+            "porte":"grande",
+            "temperamento": "Ativo e educado",
+            "local": "Duque de Caxias (RJ)"
+        },
+        {
+            "nome": "Fiona",
+            "idade": 3,
+            "tempo":"anos",
+            "porte":"pequeno",
+            "temperamento": "Calma e educada",
+            "local": "São Gonçalo (RJ)"
+        },
+        {
+            "nome": "Sid",
+            "idade": 3,
+            "tempo":"anos",
+            "porte":"médio/grande",
+            "temperamento": "Brincalhão e amável",
+            "local": "Rio de Janeiro (RJ)"
+        },
+        {
+            "nome": "Yoda",
+            "idade": 1,
+            "tempo":"ano",
+            "porte":"médio",
+            "temperamento": "Ativo e carinhoso",
+            "local": "Nova Iguaçu (RJ)"
+        },
+        {
+            "nome": "Lua",
+            "idade": 6,
+            "tempo":"meses",
+            "porte":"médio",
+            "temperamento": "Ativa e carinhosa",
+            "local": "Duque de Caxias (RJ)"
+        },
+        {
+            "nome": "Amora",
+            "idade": 45,
+            "tempo":"dias",
+            "porte":"grande",
+            "temperamento": "Calma e carinhosa",
+            "local": "São Gonçalo (RJ)"
+        },
+        {
+            "nome": "Zelda",
+            "idade": 5,
+            "tempo":"meses",
+            "porte":"médio",
+            "temperamento": "Ativa e amável",
+            "local": "Rio de Janeiro (RJ)"
+        }
+    ]
+}

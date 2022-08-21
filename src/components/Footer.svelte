@@ -11,7 +11,6 @@
         text-align: center;
         vertical-align: center;
         color: white;
-        position: absolute;
     }
     p{
         font-weight: 400;

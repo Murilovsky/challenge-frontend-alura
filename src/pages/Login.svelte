@@ -3,49 +3,60 @@
     import { getContext } from 'svelte';
     import {ValidaCampo} from '../utils/validacoes'
 
-    let cadastro = 
+    let cadastro = true
 
 </script>
 
 <div>
     <img in:fly="{{y:-100,x:100,duration:500}}" id='patas' src="Patas.png" alt="Patas">
     <img src="Logo-azul.svg" alt="Logo do adopet">
+    <img  id='forma2' src="Forma_2.svg" alt="">
     <p>Já tem conta? Faça seu login</p>
-    <form>
-        <section>
-            <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Digite seu email" required>
-            <span>{ValidaCampo('email')}</span>
-        </section>
-        {#if cadastro}
-        <section>
-            <label for="nome" >Nome e Sobrenome</label>
-            <input type="text" name='nome' placeholder="Juliana Campos" minlength="6" required>
-            <span>{ValidaCampo('nome')}</span>
-        </section>
-        {/if}
-        <section>
-            <label for="senha" >Senha</label>
-            <input type="password" name='senha' placeholder="senhaforte123" required minlength="8">
-            <span>{ValidaCampo('senha')}</span>
-        </section>
-        {#if cadastro}
-        <section>
-            <label for="senha_con" >Confirmar Senha</label>
-            <input type="password" name='senha_con' placeholder="senhaforte123" required minlength="8">
-            <span>{ValidaCampo('senha')}</span>
-        </section>
-        {/if}
+    <section>
 
-        {#if !cadastro}
-            <span class="forget">Esqueci minha senha</span>
-        {/if}
-        <button type="submit">{cadastro?'Cadastrar':'Entrar'}</button>
-
-    </form>
+        <form>
+            <section class="campo">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Digite seu email" required>
+                <span>{ValidaCampo('email')}</span>
+            </section>
+            {#if cadastro}
+            <section class="campo">
+                <label for="nome" >Nome e Sobrenome</label>
+                <input type="text" name='nome' placeholder="Juliana Campos" minlength="6" required>
+                <span>{ValidaCampo('nome')}</span>
+            </section>
+            {/if}
+            <section class="campo">
+                <label for="senha" >Senha</label>
+                <input type="password" name='senha' placeholder="senhaforte123" required minlength="8">
+                <span>{ValidaCampo('senha')}</span>
+            </section>
+            {#if cadastro}
+            <section class="campo">
+                <label for="senha_con" >Confirmar Senha</label>
+                <input type="password" name='senha_con' placeholder="senhaforte123" required minlength="8">
+                <span>{ValidaCampo('senha')}</span>
+            </section>
+            {/if}
+    
+            {#if !cadastro}
+                <span class="forget">Esqueci minha senha</span>
+            {/if}
+            <button type="submit">{cadastro?'Cadastrar':'Entrar'}</button>
+    
+        </form>
+    </section>
 </div>
 
 <style>
+    #forma2{
+        position: absolute;
+        transform: scaleX(-1);
+        left: 0;
+        top: 50
+        ;
+    }
     #patas{
         margin: 0;
         position: absolute;
@@ -63,8 +74,8 @@
     }
     div{
         padding: 150px 6% 0 6%;
-        min-height: calc(800px - 180px);
-        height: calc(100vh - 230px);
+        min-height: 700px;
+        height: calc(100vh - 80px);
         text-align: center;
     }
     form{
@@ -75,7 +86,10 @@
         align-items: center;
     }
     section{
-        height: 100px;
+        margin: auto 0;
+    }
+    .campo{
+        height: 90px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -89,5 +103,24 @@
         margin-top: 20px;
         width: 60%;
     }
-
+    @media screen and (min-width:768px){
+        div{
+            padding: auto 6%;
+        }
+        button{
+            width: 30%;
+        }
+    }
+    @media screen and (min-width:1280px){
+        div{
+            padding: 0 6%;
+        }
+        img{
+            margin: 5% 0;
+        }
+        p{
+            margin-bottom: 2%;
+        }
+       
+    }
 </style>

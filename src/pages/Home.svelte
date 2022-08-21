@@ -1,4 +1,5 @@
 <div>
+    <img id="forma2" src="Forma_2.svg" alt="Blob verde">
     <section>
         <img class='logo' src="Logo.svg" alt="">
         <h3>Boas Vindas!</h3>
@@ -7,61 +8,65 @@
         <a href="#/login"><button>Quero me Cadastrar</button></a>
     </section>
     <img id="bichos" src="Ilustracao.png" alt="Um gato e um cachorro em flat design">
-    <img id="forma2" src="Forma_2.svg" alt="Blob verde">
 </div>
 
 <style>
 div{
-    padding: 150px 14% 0 14%;
-    min-height:calc(100vh - 230px);;
+    min-height: 760px;
+    height:calc(100vh - 80px);;
     background-color: #3772FF;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    align-items: center;
+    justify-content:flex-end;
     text-align: center;
     font-size: 16px;
     line-height: 24px;
     color: white;
 }
 section{
-    min-height: 370px;
+    padding: 0 10%;
+    height: 300px;
     vertical-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 #bichos{
-    width: 300px;
-    align-self: center;
+    width: 50%;
+    max-width: 250px;
+    display: block;
+
 }
 #forma2{
     width: 70px;
-    right: 0;
     position: absolute;
+    right: 0;
+    top: 30%;
 }
 .logo{
-    max-height: 50px;
+    max-height: 150px;
     align-self: center;
 }
 @media screen and (min-width:768px){
     div{
+        
         font-size: 18px;
-        padding: 230px 20% 0 20%;
-        min-height: calc(1100px - 180px);
+        padding:0 20%;
     }
     p{
         padding: 0 19%;
     }
     section{
-        min-height: 450px;
+        height: 370px;
     }
     #bichos{
-        width: 360px;
+        max-width: 200px;
     }
 }
-@media screen and (min-width:1440px){
-    div{
-        padding: 50px 20% 0 20%;
+@media screen and (min-width:1280px){
+    #bichos{
+        max-width: 250px;
     }
 }
 

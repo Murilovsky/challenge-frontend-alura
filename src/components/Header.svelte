@@ -67,10 +67,10 @@
             margin: 0 2rem;
         }
         #forma1{
-            width: 560px;
+            width: 540px;
         }
     }
-    @media screen and (min-width:1440px){
+    @media screen and (min-width:1280px){
         section{
             margin-left: 3%;
         }
