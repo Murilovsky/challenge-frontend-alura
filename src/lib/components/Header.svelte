@@ -1,80 +1,80 @@
-<script>
-    export let userLogged
-
+<script lang="ts">
+    export let userLogged: boolean;
 </script>
+
 <header>
-    <img id='forma1' src="Forma_1.svg" alt="Forma1">
+    <img id="forma1" src="Forma_1.svg" alt="Forma1" />
     <section>
         <div class="links">
             <a href="#/">
-                <img id='logo' src="Logo.svg" alt="Adopet's Logo">
+                <img id="logo" src="Logo.svg" alt="Adopet's Logo" />
             </a>
 
             <a href="#/">
-                <img class='imagem' src="Casa.svg" alt="Home">                
+                <img class="imagem" src="Casa.svg" alt="Home" />
             </a>
 
-            <a href={userLogged?'#/contato':'#/login'}>
-                <img class='imagem' src="Mensagens.svg" alt="Mail">
+            <a href={userLogged ? "#/contato" : "#/login"}>
+                <img class="imagem" src="Mensagens.svg" alt="Mail" />
             </a>
         </div>
         {#if userLogged}
-        <div class="perfil">
-            <a href="#/perfil">
-                <img src="Usuario.png" alt="User">
-            </a>
-        </div>   
-        {/if} 
+            <div class="perfil">
+                <a href="#/perfil">
+                    <img src="Usuario.png" alt="User" />
+                </a>
+            </div>
+        {/if}
     </section>
 </header>
 
 <style>
-    header{
+    header {
         width: 90vw;
         position: absolute;
     }
-    section{
+    section {
         padding: 2rem 1rem;
         display: flex;
         justify-content: space-between;
         position: absolute;
         width: 100%;
     }
-    .links{
+    .links {
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
-    .imagem{
+    .imagem {
         box-sizing: border-box;
         margin: 0 2.5rem;
         max-height: 3rem;
     }
-    #logo{
+    #logo {
         display: none;
     }
-    #forma1{
+    #forma1 {
         user-select: none;
         -moz-user-select: none;
         -webkit-user-select: none;
         width: 360px;
         position: absolute;
     }
-    @media screen and (min-width:768px){
-        #logo{
+    @media screen and (min-width: 768px) {
+        #logo {
             width: 130px;
             display: inline;
             margin: 0 2rem;
         }
-        #forma1{
+        #forma1 {
             width: 500px;
         }
     }
-    @media screen and (min-width:1280px){
-        section{
+    @media screen and (min-width: 1280px) {
+        section {
             margin-left: 3%;
         }
-        .imagem{
+        .imagem {
             margin: 0 1.5rem;
             max-height: 2rem;
         }

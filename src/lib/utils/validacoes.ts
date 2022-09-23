@@ -1,4 +1,4 @@
-export function ValidaCampo(type) {
+export function ValidaCampo(type: any) {
   return "";
 }
 
