@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Adopet | Contato</title>
+</svelte:head>
 <div>
     <img id="forma2" src="Forma_2.svg" alt="Blob verde" />
     <p>
@@ -76,7 +79,7 @@
         right: 0;
         top: 40%;
     }
-    button{
+    button {
         align-self: center;
     }
     @media screen and (min-width: 768px) {

@@ -1,11 +1,15 @@
 <script lang="ts">
     import { fly } from "svelte/transition";
     import InputLabel from "$lib/components/InputLabel.svelte";
-    import { ValidaEmail, ValidaSenha } from "$lib/utils/validacoes";
+    import {
+        ValidaEmail,
+        ValidaNome,
+        ValidaSenha,
+    } from "$lib/utils/validacoes";
 </script>
 
 <svelte:head>
-    <title>Adopet | Login</title>
+    <title>Adopet | Register</title>
 </svelte:head>
 
 <div>
@@ -29,19 +33,28 @@
                     funcao: ValidaEmail,
                 }}
             />
+
+            <InputLabel
+                props={{
+                    title: "Nome e Sobrenome",
+                    name: "nome",
+                    placeholder: "Juliana Campos",
+                    type: "text",
+                    funcao: ValidaNome,
+                }}
+            />
+
             <InputLabel
                 props={{
                     title: "Senha",
                     name: "senha",
-                    placeholder: "senhaForte123",
+                    placeholder: "senhaforte123",
                     type: "password",
                     funcao: ValidaSenha,
                 }}
             />
-
-            <span class="forget">Esqueci minha senha</span>
-
-            <button type="submit">Entrar</button>
+            //FALTA FAZER A CONFIRMAÇÃO DE SENHA
+            <button type="submit">Cadastrar</button>
         </form>
     </section>
 </div>
@@ -84,6 +97,12 @@
     }
     section {
         margin: auto 0;
+    }
+    .campo {
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
     .forget {
         margin-top: 10px;

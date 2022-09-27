@@ -1,30 +1,20 @@
 <script lang="ts">
+    import type Pet from "$lib/utils/interfaces/IPet";
     import { fade } from "svelte/transition";
 
-    export let nome: string;
-    export let idade: number;
-    export let tempo: string;
-    export let temperamento: string;
-    export let porte: string;
-    export let local: string;
-
-    async function MontaPet(json: any) {
-        return {
-            nome: json.nome,
-        };
-    }
+    export let pet: Pet;
 </script>
 
 <div in:fade id="card">
-    <img id="foto-pet" src="/Animais/Animais_-_{nome}.png" alt="" />
+    <img id="foto-pet" src="/Animais/Animais_-_{pet.nome}.png" alt="" />
     <section>
-        <p id="nome-pet">{nome}</p>
+        <p id="nome-pet">{pet.nome}</p>
         <div id="info">
-            <p>{idade} {tempo}</p>
-            <p>{porte}</p>
-            <p>{temperamento}</p>
+            <p>{pet.idade} {pet.tempo}</p>
+            <p>{pet.porte}</p>
+            <p>{pet.temperamento}</p>
         </div>
-        <p id="local">{local}</p>
+        <p id="local">{pet.local}</p>
         <div id="contato">
             <img id="icone" src="/ícone_mensagem.svg" alt="Ícone mensagem" />
             <a href="#/">

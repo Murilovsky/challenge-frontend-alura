@@ -6,21 +6,21 @@
     <img id="forma1" src="Forma_1.svg" alt="Forma1" />
     <section>
         <div class="links">
-            <a href="#/">
+            <a href="/">
                 <img id="logo" src="Logo.svg" alt="Adopet's Logo" />
             </a>
 
-            <a href="#/">
+            <a href="/">
                 <img class="imagem" src="Casa.svg" alt="Home" />
             </a>
 
-            <a href={userLogged ? "#/contato" : "#/login"}>
+            <a href={userLogged ? "/contato" : "/login"}>
                 <img class="imagem" src="Mensagens.svg" alt="Mail" />
             </a>
         </div>
         {#if userLogged}
             <div class="perfil">
-                <a href="#/perfil">
+                <a href="/profile">
                     <img src="Usuario.png" alt="User" />
                 </a>
             </div>

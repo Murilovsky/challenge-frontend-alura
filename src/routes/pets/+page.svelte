@@ -3,21 +3,18 @@
     import PetCard from "$lib/components/PetCard.svelte";
 </script>
 
+<svelte:head>
+    <title>Adopet | Pets</title>
+</svelte:head>
 <div>
     <p>Olá! Veja os amigos disponíveis para adoção!</p>
     {#await ListaPets()}
         <p>Buscando pets disponíveis</p>
-    {:then promise}
+        <img id="logo" src="/adopet_bar.png" alt="" />
+    {:then data}
         <section>
-            {#each promise as pet}
-                <PetCard
-                    nome={pet.nome}
-                    idade={pet.idade}
-                    temperamento={pet.temperamento}
-                    tempo={pet.tempo}
-                    local={pet.local}
-                    porte={pet.porte}
-                />
+            {#each data as pet}
+                <PetCard {pet} />
             {/each}
         </section>
     {:catch err}
@@ -30,7 +27,20 @@
         text-align: center;
         min-height: calc(100vh - 80px);
     }
-
+    #logo {
+        animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+        0% {
+            scale: 0.75;
+        }
+        50% {
+            scale: 1;
+        }
+        100% {
+            scale: 0.75;
+        }
+    }
     p {
         font-size: 18px;
         color: #3772ff;

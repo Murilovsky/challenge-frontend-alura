@@ -6,7 +6,8 @@ export { matchers } from './client-matchers.js';
 	() => import('./nodes/3'),
 	() => import('./nodes/4'),
 	() => import('./nodes/5'),
-	() => import('./nodes/6')];
+	() => import('./nodes/6'),
+	() => import('./nodes/7')];
 
 			export const server_loads = [];
 
@@ -15,7 +16,8 @@ export { matchers } from './client-matchers.js';
 	"contato": [3],
 	"login": [4],
 	"pets": [5],
-	"profile": [6]
+	"profile": [6],
+	"register": [7]
 };
 
 			export const hooks = {
